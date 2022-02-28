@@ -1,7 +1,22 @@
 @import "config/variables";
-@import "config/mixins";
 
-@import "~/node_modules/bootstrap/scss/bootstrap.scss";
-@import "~/node_modules/bootstrap-vue/src/index.scss";
+* {
+  font-family: 'Poppins';
+  color: $black;
+}
 
-@import "plugin/tmdr-preset";
+.twist-enter-active, .twist-leave-active {
+  transition: opacity .7s, transform .7s;
+}
+
+.twist-enter, .twist-leave-to {
+  opacity: 0;
+  transform: scale(0.4) rotate(-90deg);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

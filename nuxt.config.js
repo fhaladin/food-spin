@@ -11,7 +11,19 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+        integrity: 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC',
+        crossorigin: 'anonymous'
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -23,7 +35,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: false,
+  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -33,8 +45,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
@@ -43,18 +53,13 @@ export default {
 
   basic: {
     name: 'timedoor',
-    pass: 'NeverGiveUp2021',
+    pass: 'fhaladin',
     enabled: process.env.BASIC_ENABLED === 'true'
   },
 
   styleResources: {
     // Noted, all style file in this section will loaded in every page and component
     scss: ['./assets/scss/config/*.scss']
-  },
-
-  bootstrapVue: {
-    bootstrapCSS: false,
-    bootstrapVueCSS: false
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
